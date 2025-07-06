@@ -32,3 +32,15 @@
 
  <p>첫째 줄에 B진법 수 N을 10진법으로 출력한다.</p>
 
+### 리뷰
+<p>
+ def decimal_change(N, B):
+     result = 0
+     for i, ch in enumerate(reversed(N)):
+         result += int(ch, 36) * (B ** i)
+     return result
+ 
+ N, B = input().split()
+ B = int(B)
+ print(decimal_change(N, B))
+</p>
